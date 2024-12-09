@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Bhojpur_tourism</string>
+    <string name="subscribe_to_neet_roots">Subscribe to Neet Roots</string>
+    <string name="welcome_to_neet_roots">Welcome to Neet Roots</string>
+    <string name="Hello_gautam">Hello Gautam</string>
+    <string name="save_the_playlist">Save the Playlist</string>
 </resources>
