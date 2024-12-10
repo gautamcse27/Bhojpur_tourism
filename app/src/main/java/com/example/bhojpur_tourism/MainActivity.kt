@@ -1,7 +1,9 @@
 package com.example.bhojpur_tourism
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,6 +58,13 @@ class MainActivity : AppCompatActivity() {
         var customAdapter = CustomAdapter(modelList,this);
         val gridView=findViewById<GridView>(R.id.gridView)
         gridView.adapter= customAdapter
+        gridView.setOnItemClickListener {
+            adapterView, view, i, l ->
+            var intent = Intent(this, ViewActivity::class.java)
+            intent.putExtra("data", modelList[i])
+            startActivity(intent);
+           }
+        }
     }
     class CustomAdapter(
         var itemModel: ArrayList<Model>,
@@ -88,4 +97,3 @@ class MainActivity : AppCompatActivity() {
             return view !!;
         }
     }
-}

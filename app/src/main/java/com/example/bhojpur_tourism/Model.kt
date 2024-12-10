@@ -1,6 +1,9 @@
 package com.example.bhojpur_tourism
 
-class Model {
+import java.io.Serializable
+
+
+class Model : Serializable {
     var name:String? =null
     var image:Int? =null
 
