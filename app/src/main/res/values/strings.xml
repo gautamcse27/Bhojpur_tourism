@@ -4,4 +4,6 @@
     <string name="welcome_to_neet_roots">Welcome to Neet Roots</string>
     <string name="Hello_gautam">Hello Gautam</string>
     <string name="save_the_playlist">Save the Playlist</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
 </resources>
