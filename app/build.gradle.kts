@@ -40,7 +40,8 @@ android {
 }
 
 dependencies {
-
+    implementation (libs.androidx.coordinatorlayout)
+    implementation (libs.material.vxxx)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
