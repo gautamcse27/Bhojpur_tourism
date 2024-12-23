@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -12,13 +11,14 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.GridView
 import android.widget.ImageView
+import androidx.appcompat.widget.Toolbar;
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
+
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
     lateinit var drawerLayout: DrawerLayout
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
   var modelList = ArrayList<Model>()
     var names= arrayOf(
         "Veer Kunwar Singh",
-        "image2",
+        "Ara Temple",
         "image3",
         "image4",
         "image5",
@@ -92,7 +92,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false) // Disable default title
+
+        val toolbarTitle: TextView = findViewById(R.id.toolbar_title)
+        toolbarTitle.text = "Your Custom Header Title"
+
         drawerLayout = findViewById(R.id.my_drawer_layout)
+        val navView: NavigationView = findViewById(R.id.navigation_view)
+
+
         actionBarDrawerToggle = ActionBarDrawerToggle(
             this, drawerLayout, R.string.nav_open,
             R.string.nav_close
@@ -101,6 +111,25 @@ class MainActivity : AppCompatActivity() {
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener {
+            // Handle navigation view item clicks here.
+            when (it.itemId) {
+                R.id.nav_account -> {
+                    // Handle the home action
+                }
+                R.id.nav_settings -> {
+                    // Handle the gallery action
+                }
+                R.id.nav_logout -> {
+                    // Handle the slideshow action
+                }
+            }
+            drawerLayout.closeDrawer(GravityCompat.START)
+            true
+        }
+
+
 
        for (i in names.indices){
             modelList.add(Model(names[i],names1[i],images[i]))
@@ -117,12 +146,23 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+    override fun onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             true
         } else super.onOptionsItemSelected(item)
     }
+
     }
+
+
+
     class CustomAdapter(
         var itemModel: ArrayList<Model>,
         var context:Context

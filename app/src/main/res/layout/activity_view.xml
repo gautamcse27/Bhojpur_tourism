@@ -14,17 +14,29 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:layout_height="60dp"
+
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="150dp"
+
                 app:layout_collapseMode="pin" />
 
+            <TextView
+                android:id="@+id/viewName"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:text="Header Title"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -37,30 +49,16 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/viewName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="30dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="30dp"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.238"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.368" />
+
 
         <ImageView
             android:id="@+id/viewImage"
             android:layout_width="400dp"
             android:layout_height="350dp"
             android:paddingLeft="10dp"
+            android:layout_marginTop="60dp"
             android:paddingRight="10dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="@id/viewName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.454"
