@@ -51,6 +51,7 @@
 
 
 
+
         <ImageView
             android:id="@+id/viewImage"
             android:layout_width="400dp"
