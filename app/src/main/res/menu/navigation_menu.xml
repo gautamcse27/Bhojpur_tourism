@@ -6,14 +6,16 @@
 
     <item
         android:id="@+id/nav_account"
-        android:title="My Account" />
+        android:title="Explore Bhojpur"
+
+       />
 
     <item
         android:id="@+id/nav_settings"
-        android:title="Settings" />
+        android:title="Art &amp; Culture" />
 
     <item
         android:id="@+id/nav_logout"
-        android:title="Logout" />
+        android:title="About" />
 
 </menu>

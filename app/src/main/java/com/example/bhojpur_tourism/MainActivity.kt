@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Button
 import android.widget.GridView
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar;
@@ -23,6 +24,8 @@ import com.google.android.material.navigation.NavigationView
 class MainActivity : AppCompatActivity() {
     lateinit var drawerLayout: DrawerLayout
     lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
+
+
 
   var modelList = ArrayList<Model>()
     var names= arrayOf(
@@ -41,24 +44,15 @@ class MainActivity : AppCompatActivity() {
     )
     var names1= arrayOf(
         "Singh led the Indian Rebellion of 1857 in Bihar. He was nearly eighty and in failing health when he was called upon to take up arms. " +
-                "He was assisted by both his brother, Babu Amar Singh and his commander-in-chief, Hare Krishna Singh. Some argue" +
-                " that the latter was the real reason behind Kunwar Singh's initial military success.[8] He was a tough opponent " +
+                "He was assisted by both his brother,behind Kunwar Singh's initial military success.[8] He was a tough opponent " +
                 "and harried British forces for nearly a year. He was an expert in the art of guerilla warfare. His tactics sometimes left the British puzzled.[9]\n" +
                 "\n" +
                 "Singh assumed command of the soldiers who had revolted at Danapur on 25 July. Two days later he occupied Arrah," +
-                " the district headquarters. Major Vincent Eyre relieved the town on 3 August, defeated Singh's force and destroyed" +
-                " Jagdishpur. During the rebellion, his army had to cross the Ganges river. The army of Brigadier Douglas began" +
+                " the district headquarters.  The army of Brigadier Douglas began" +
                 " to shoot at their boat. One of the bullets shattered Singh's left wrist. Singh felt that his hand had become" +
                 " useless and that there was the additional risk of infection due to the bullet-shot. He drew his sword and cut off" +
-                " his left hand near the elbow and offered it to the Ganges.[9][10]\n" +
-                "\n" +
-                "Singh left his ancestral village and reached Lucknow in December 1857 where he met with other rebel leaders. In March 1858," +
-                " he occupied Azamgarh in North-Western Provinces (Uttar Pradesh) and managed to repel the initial British attempts to take" +
-                " the area.[11] However, he had to leave the place soon. Pursued by Douglas, he retreated towards his home at Arrah. " +
-                "On 23 April, Singh had a victory near Jagdishpur over the force led by Captain Le Grande (pronounced as Le Garde in Hindi). " +
-                "On 26 April 1858 he died in his village. The mantle of the old chief now fell on his brother Amar Singh II," +
-                " who continued the struggle for a considerable time, running a parallel" +
-                " government in the district of Shahabad. In October 1859, Amar Singh II joined the rebel leaders in the Terai plains of Nepal.[10]",
+                " his left hand near the elbow and offered it to the Ganges." +
+                " government in the district of Shahabad. ",
         "Temple1",
         "Temple2",
         "Temple3",
@@ -91,6 +85,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
