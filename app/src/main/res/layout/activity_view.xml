@@ -35,7 +35,7 @@
                 android:padding="16dp"
                 android:textStyle="bold"
                 android:text="Header Title"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="20sp" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -49,9 +49,6 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
-
-
-
         <ImageView
             android:id="@+id/viewImage"
             android:layout_width="400dp"
@@ -59,7 +56,7 @@
             android:paddingLeft="10dp"
             android:layout_marginTop="60dp"
             android:paddingRight="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="4dp"
             app:layout_constraintBottom_toBottomOf="@id/viewName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.454"
@@ -71,19 +68,36 @@
             android:id="@+id/viewName1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="44dp"
+            android:layout_marginBottom="10dp"
             android:textSize="15sp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.384"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            />
+            android:maxLines="5"
+            android:ellipsize="end" />
 
+        <Button
+            android:id="@+id/buttonViewMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="View More"
+            android:textColor="@color/red"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/buttonShowOnMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rectangular_button_background"
+            android:text="Show on Map" />
     </LinearLayout>
     </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
