@@ -35,7 +35,7 @@
                 android:padding="16dp"
                 android:textStyle="bold"
                 android:text="Header Title"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="20sp" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -71,19 +71,36 @@
             android:id="@+id/viewName1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="44dp"
+            android:layout_marginBottom="0dp"
             android:textSize="15sp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="1dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.384"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.0"
+            android:maxLines="5"
+            android:ellipsize="end"
             />
-
+        <Button
+            android:id="@+id/buttonViewMore"
+            android:layout_width="118dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/red"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="View More" />
+        <Button
+            android:id="@+id/buttonShowOnMap"
+            android:layout_width="wrap_content"
+            android:background="@drawable/rectangular_button_background"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:text="Show on Map" />
     </LinearLayout>
     </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
